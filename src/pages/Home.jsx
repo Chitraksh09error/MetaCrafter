@@ -10,6 +10,7 @@ import { NumberTicker } from "@/components/magicui/number-ticker";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import HorizontalVscroll from '@/components/HorizontalVscroll';
+import ServiceMenu from '@/components/ServiceMenu';
 const Home = () => {
 
   const { ref, inView } = useInView({
@@ -115,10 +116,10 @@ const Home = () => {
         <h1 className={`text-center text-4xl mt-10  ${inView ? ' text-white' : ' text-black'} font-extrabold text-black`}>CASE STUDIES</h1>
         <HorizontalVscroll />
       </div>
-      <div className='w-full bg-red-200 h-96 text-center'>
+      <div className=' text-center mb-20'>
 
         <h1>OUR BUDDIES</h1>
-
+        <ServiceMenu/>
       </div>
     </>
   )

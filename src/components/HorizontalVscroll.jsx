@@ -12,7 +12,7 @@ const HorizontalVscroll = () => {
     useEffect(() => {
         let ctx;
 
-        if (window.innerWidth >= 768) {  // Enable GSAP only on md and above
+        if (window.innerWidth >= 1024) {  // Enable GSAP only on md and above
             ctx = gsap.context(() => {
                 const panels = gsap.utils.toArray('.panel');
                 const halfWindow = window.innerWidth / 2;
