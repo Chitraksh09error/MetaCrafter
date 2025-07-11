@@ -9,8 +9,8 @@ const ServiceMenu = () => {
   };
 
   return (
-    <div className="w-full lg:px-14 px-3 mt-10">
-      <div className="lg:rounded-[50px] rounded-[25px] overflow-hidden">
+    <div className="w-full  lg:px-14 px-3 mt-10">
+      <div className="lg:rounded-[50px]  rounded-[25px] border-2 border-amber-50 overflow-hidden">
         {accordionData.slice(0, 6).map((item, index) => {
           const isFirst = index === 0;
           const isLast = index === 5;
@@ -27,7 +27,7 @@ const ServiceMenu = () => {
             >
               {/* Accordion Header */}
               <div
-                className={`relative group flex justify-start items-center w-full bg-black lg:px-12 px-6 lg:py-20 py-8 text-white text-4xl lg:font-extrabold font-bold uppercase cursor-pointer transition-all duration-300 ${
+                className={`relative group flex justify-start  items-center w-full bg-black lg:px-12 px-6 lg:py-20 py-8 text-white text-4xl lg:font-extrabold font-bold uppercase cursor-pointer transition-all duration-300 ${
                   isExpanded ? "border-b-0" : ""
                 }`}
                 onClick={() => toggleAccordion(index)}

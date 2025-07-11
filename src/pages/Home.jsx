@@ -5,6 +5,7 @@ import chn from '../assets/chinaflag.png';
 import usa from '../assets/usaflag.png';
 import indo from '../assets/indoflag.png';
 import earth from '../assets/earth1.mp4';
+import { Link } from 'react-router-dom';
 import { SpinningText } from "@/components/magicui/spinning-text";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { useEffect } from "react";
@@ -14,11 +15,18 @@ import ServiceMenu from '@/components/ServiceMenu';
 const Home = () => {
 
   const { ref, inView } = useInView({
-    threshold: 0.2, // 50% visible triggers change
+    threshold: 0.1, // 50% visible triggers change
   });
   useEffect(() => {
     document.body.style.backgroundColor = inView ? "black" : "#fffbee";
+
+    return () => {
+      // Reset background on component unmount
+      document.body.style.backgroundColor = "#fffbee";
+    };
   }, [inView]);
+
+  
 
   return (
     <>
@@ -63,6 +71,7 @@ const Home = () => {
         {/* World map icons*/}
 
       </div>
+      <div ref={ref}>
       <div className='lg:mt-24 mt-1'>
 
         <div className={`text-center ${inView ? ' text-white' : ' text-black'}  `}>
@@ -73,7 +82,7 @@ const Home = () => {
 
           <div className='lg:px-60 px-5'>
 
-            <div ref={ref} className='flex   flex-wrap px-5  lg:justify-center justify-start mt-10  lg:gap-y-10 gap-y-2.5 gap-10'>
+            <div  className='flex   flex-wrap px-5  lg:justify-center justify-start mt-10  lg:gap-y-10 gap-y-2.5 gap-10'>
 
               <div className='flex gap-4   items-center'>
                 <img src={ind} className='lg:w-12 w-10 rounded-md' alt="" />
@@ -102,7 +111,7 @@ const Home = () => {
 
         </div>
       </div>
-      <div ref={ref} className='mt-10 hidden md:flex  mb-20' >
+      <div  className='mt-10 hidden md:flex  mb-20' >
         <video
           src={earth}
           autoPlay
@@ -116,11 +125,17 @@ const Home = () => {
         <h1 className={`text-center text-4xl mt-10  ${inView ? ' text-white' : ' text-black'} font-extrabold text-black`}>CASE STUDIES</h1>
         <HorizontalVscroll />
       </div>
-      <div className=' text-center mb-20'>
+      <div  className=' text-center mb-20'>
 
         <h1>OUR BUDDIES</h1>
         <ServiceMenu/>
+        <div className='lg:mt-7 mt-4'>
+        <Link onClick={() => window.scrollTo(0, 0)}  to="/service" className={`  font-bold ${inView ? ' text-white' : ' text-black'} lg:text-3xl text-xl `} >More Services  </Link>
+
+        </div>
       </div>
+      </div>
+      <div className='mt-44 h-96'></div>
     </>
   )
 }
