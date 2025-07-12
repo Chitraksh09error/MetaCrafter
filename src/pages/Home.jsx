@@ -53,10 +53,10 @@ const Home = () => {
               transition={{ duration: 0.4, delay: 0 }}
 
               className='mt-14 mb-10 space-y-2 '>
-              <h1 className='montes lg:text-7xl   lg:leading-20 md:text-6xl  text-5xl lg:text-left md:text-left text-center space-y-11  font-extrabold'>WE <span className='text-amber-300'>CREATE</span> <br /> MEMORABLE <br /> MOMENTS
+              <h1 className={`montes lg:text-7xl   lg:leading-20 md:text-6xl ${inView ? ' text-white' : ' text-black'}  text-5xl lg:text-left md:text-left text-center space-y-11  font-extrabold`}>WE <span className='text-amber-300'>CREATE</span> <br /> MEMORABLE <br /> MOMENTS
               </h1>
               <div>
-                <h1 className='montes lg:text-7xl lg:leading-20  md:text-6xl text-5xl lg:text-left text-center space-y-11  font-extrabold'>FOR <span className='text-amber-300' >BRANDS</span> </h1>
+                <h1 className={`montes lg:text-7xl lg:leading-20  md:text-6xl ${inView ? ' text-white' : ' text-black'} text-5xl lg:text-left text-center space-y-11  font-extrabold `}>FOR <span className='text-amber-300' >BRANDS</span> </h1>
               </div>
 
 
@@ -85,6 +85,27 @@ const Home = () => {
         </div>
         {/* World map icons*/}
 
+      </div>
+      <div className='flex flex-col space-y-3 px-5 md:hidden'>
+        <h2 className='text-lg'>( About Us )</h2>
+        <h1 className='text-5xl font-bold text-blue-950 '>Metacrafter</h1>
+        <h2 className='text-4xl text-blue-950 font-semibold'>
+          Where creativity meets conversion.
+        </h2>
+        <h2 className='text-justify font-medium' >Founded by Aman Kursange, Metacrafter is a creative growth company turning brands into magnetic digital experiences. From cinematic reels to data-backed ad strategies — we don’t just market, we craft stories that sell.
+          Metacrafter is the brainchild of Aman Kursange — a storyteller, strategist, and builder of digital magic. It’s not just a company; it’s a movement of modern marketing, where art meets algorithm and design meets depth.
+        </h2>
+        <br />
+        <h2 className='text-2xl font-semibold text-blue-950'>We don’t just market.</h2>
+        <h2 className='font-medium text-xl'>We craft moods. Build presence. And turn noise into aesthetic narrative.</h2>
+        <h2 className='text-justify font-medium' >From cinematic reels to scroll-stopping campaigns, from sleek brand identities to performance-driven ads — Metacrafter is your creative growth partner for the now and the next.
+        </h2>
+        <h1>
+          🖤 For brands with soul.
+        </h1>
+        <h1>🌀 For stories worth remembering.
+        </h1>
+        <h1>🎯 For impact that linger</h1>
       </div>
       <div ref={ref}>
         <div className='lg:mt-24 mt-7'>
