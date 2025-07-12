@@ -87,7 +87,7 @@ const Home = () => {
 
       </div>
       <div ref={ref}>
-        <div className='lg:mt-24 mt-1'>
+        <div className='lg:mt-24 mt-7'>
 
           <div className={`text-center ${inView ? ' text-white' : ' text-black'}  `}>
             <h1 className='lg:text-5xl montes text-3xl  font-extrabold'>
