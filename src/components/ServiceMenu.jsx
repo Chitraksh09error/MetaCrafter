@@ -1,7 +1,7 @@
 import accordionData from "../data/accordionData";
 import { useState } from "react";
 
-const ServiceMenu = () => {
+const ServiceMenu = ({inView}) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
