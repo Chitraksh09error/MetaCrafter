@@ -87,34 +87,42 @@ const Home = () => {
 
       </div>
       <div className='flex flex-col space-y-3 px-5 md:hidden'>
-        <h2 className='text-lg'>( About Us )</h2>
-        <h1 className='text-5xl font-bold text-blue-950 '>Metacrafter</h1>
-        <h2 className='text-4xl text-blue-950 font-semibold'>
+        <h2 className={`text-lg ${inView ? ' text-white' : ' text-black'} `}>( About Us )</h2>
+        <h1 className={`text-5xl font-bold  ${inView ? ' text-amber-300' : ' text-blue-950'} `}>Metacrafter</h1>
+        <h2 className={`text-4xl ${inView ? ' text-amber-300' : ' text-blue-950'} font-semibold`}>
           Where creativity meets conversion.
         </h2>
-        <h2 className='text-justify font-medium' >Founded by Aman Kursange, Metacrafter is a creative growth company turning brands into magnetic digital experiences. From cinematic reels to data-backed ad strategies — we don’t just market, we craft stories that sell.
-          Metacrafter is the brainchild of Aman Kursange — a storyteller, strategist, and builder of digital magic. It’s not just a company; it’s a movement of modern marketing, where art meets algorithm and design meets depth.
+        <h2 className={`text-justify font-medium ${inView ? ' text-white' : ' text-black'} `} >Founded by Aman Kursange, Metacrafter is a creative growth company turning brands into magnetic digital experiences. From cinematic reels to data-backed ad strategies — we don't just market, we craft stories that sell.
+          Metacrafter is the brainchild of Aman Kursange — a storyteller, strategist, and builder of digital magic. It's not just a company; it's a movement of modern marketing, where art meets algorithm and design meets depth.
         </h2>
         <br />
-        <h2 className='text-2xl font-semibold text-blue-950'>We don’t just market.</h2>
-        <h2 className='font-medium text-xl'>We craft moods. Build presence. And turn noise into aesthetic narrative.</h2>
-        <h2 className='text-justify font-medium' >From cinematic reels to scroll-stopping campaigns, from sleek brand identities to performance-driven ads — Metacrafter is your creative growth partner for the now and the next.
+        <h2 className={`text-2xl ${inView ? ' text-amber-300' : ' text-blue-950'}  font-semibold `}>We don't just market.</h2>
+        <h2 className={`font-medium text-xl ${inView ? ' text-white' : ' text-black'} `}>We craft moods. Build presence. And turn noise into aesthetic narrative.</h2>
+        <h2 className={`text-justify font-medium ${inView ? ' text-white' : ' text-black'} `} >From cinematic reels to scroll-stopping campaigns, from sleek brand identities to performance-driven ads — Metacrafter is your creative growth partner for the now and the next.
         </h2>
-        <h1>
+        <h1 className={`${inView ? ' text-amber-300' : ' text-black'}`}>
           🖤 For brands with soul.
         </h1>
-        <h1>🌀 For stories worth remembering.
+        <h1  className={`${inView ? ' text-amber-300' : ' text-black'}`} >🌀 For stories worth remembering.
         </h1>
-        <h1>🎯 For impact that linger</h1>
+        <h1 className={`${inView ? ' text-amber-300' : ' text-black'}`}>🎯 For impact that linger</h1>
       </div>
       <div ref={ref}>
-        <div className='lg:mt-24 mt-7'>
+        <div className='lg:mt-24 mt-10'>
 
           <div className={`text-center ${inView ? ' text-white' : ' text-black'}  `}>
-            <h1 className='lg:text-5xl montes text-3xl  font-extrabold'>
+            <motion.h1
+             initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.1 }}
+            className='lg:text-5xl montes text-3xl  font-extrabold'>
               FUN FACTS <span className='text-amber-300'>?</span>
-            </h1>
-            <h2 className='lg:text-3xl text-2xl px-5 font-semibold mt-3'>Our following would rank as the third most populous 'country' after India and China.</h2>
+            </motion.h1>
+            <motion.h2 
+             initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.1 }}
+            className='lg:text-3xl text-2xl px-5 font-semibold mt-3'>Our following would rank as the third most populous 'country' after India and China.</motion.h2>
 
             <div className='lg:px-60 px-5'>
 
