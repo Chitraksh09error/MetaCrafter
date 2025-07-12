@@ -39,7 +39,7 @@ const Home = () => {
               initial={{ x: -250, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-
+              viewport={{ once: true }}
               className='h-20  items-center lg:justify-start justify-center  hidden md:flex mx-16'>
 
               <SpinningText className="lg:text-lg font-semibold" duration={8} radius={6}>
@@ -51,7 +51,7 @@ const Home = () => {
               initial={{ x: -250, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0 }}
-
+              viewport={{ once: true }}
               className='mt-14 mb-10 space-y-2 '>
               <h1 className={`montes lg:text-7xl   lg:leading-20 md:text-6xl ${inView ? ' text-white' : ' text-black'}  text-5xl lg:text-left md:text-left text-center space-y-11  font-extrabold`}>WE <span className='text-amber-300'>CREATE</span> <br /> MEMORABLE <br /> MOMENTS
               </h1>
@@ -77,6 +77,7 @@ const Home = () => {
             initial={{ x: 250, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.1 }}
+            viewport={{ once: true }}
             src={img}
             alt="Background"
             className=" lg:h-[70vh] md:h-[65vh] h-72   overflow-hidden object-cover"
@@ -86,7 +87,7 @@ const Home = () => {
         {/* World map icons*/}
 
       </div>
-      <div className='flex flex-col space-y-3 px-5 md:hidden'>
+      <div className='flex flex-col flex-wrap space-y-3 px-5 md:hidden'>
         <h2 className={`text-lg ${inView ? ' text-white' : ' text-black'} `}>( About Us )</h2>
         <h1 className={`text-5xl font-bold  ${inView ? ' text-amber-300' : ' text-blue-950'} `}>Metacrafter</h1>
         <h2 className={`text-4xl ${inView ? ' text-amber-300' : ' text-blue-950'} font-semibold`}>
