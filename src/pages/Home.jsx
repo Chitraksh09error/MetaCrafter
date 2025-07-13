@@ -1,5 +1,6 @@
 import React from 'react'
 import img from '../assets/metacrafterss.png';
+import imgW from '../assets/metacrafterssW.png';
 import ind from '../assets/indflag.png';
 import chn from '../assets/chinaflag.png';
 import usa from '../assets/usaflag.png';
@@ -78,18 +79,18 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="lg:h-[70vh]  md:h-76 h-80   overflow-hidden">
+          {/* <div className="lg:h-[70vh]  md:h-76 h-80   overflow-hidden"> */}
           <motion.img
 
             initial={{ x: 250, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.1 }}
             viewport={{ once: true }}
-            src={img}
+            src={`${inView ? imgW : img}`}
             alt="Background"
             className=" lg:h-[74vh] md:h-[65vh] h-80   overflow-hidden object-cover"
           />
-          </div>
+          {/* </div> */}
 
         </div>
         {/* World map icons*/}
@@ -135,7 +136,7 @@ const Home = () => {
 
             <div className='lg:px-60 px-5'>
 
-              <div className='flex   flex-wrap px-5  lg:justify-center justify-start mt-10  lg:gap-y-10 gap-y-2.5 gap-10'>
+              <div className='flex   flex-wrap px-5  lg:justify-center md:justify-center justify-start mt-10  lg:gap-y-10 gap-y-2.5 gap-10'>
 
                 <div className='flex gap-4   items-center'>
                   <img src={ind} className='lg:w-12 w-10 rounded-md' alt="" />
