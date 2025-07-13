@@ -174,9 +174,13 @@ const Home = () => {
           <h1 className={`text-center text-4xl mt-10  ${inView ? ' text-white' : ' text-black'} font-extrabold text-black`}>CASE STUDIES</h1>
           <HorizontalVscroll inView={inView} />
         </div>
-        <div className=' text-center mb-20'>
+        <div className=' text-center mb-20 '>
 
-          <h1>OUR BUDDIES</h1>
+          <div className='lg:px-52 px-2'>
+          <h1 className='text-white lg:text-5xl text-4xl font-extrabold'>Specialization</h1>
+          <h2 className='lg:text-3xl lg:mt-6 mt-5 text-white text-center  text-xl'>We’re passionate about identifying cutting-edge digital innovations that empower visionary brands to break boundaries and create meaningful impact</h2>
+
+          </div>
           <ServiceMenu inView={inView} />
           <div className='lg:mt-7 mt-4'>
             <Link onClick={() => window.scrollTo(0, 0)} to="/service" className={`  font-bold ${inView ? ' text-white' : ' text-black'} lg:text-3xl text-xl `} >More Services  </Link>

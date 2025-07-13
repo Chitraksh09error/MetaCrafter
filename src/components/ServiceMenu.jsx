@@ -20,23 +20,23 @@ const ServiceMenu = ({inView}) => {
             <div
               key={index}
               className={`
-                border-b border-white
+                border-b-2 border-white
                 ${isFirst ? "rounded-t-[50px]" : ""}
                 ${isLast ? "rounded-b-[50px] border-b-0" : ""}
               `}
             >
               {/* Accordion Header */}
               <div
-                className={`relative group flex justify-start  items-center w-full bg-black lg:px-12 px-6 lg:py-20 py-8 text-white text-4xl lg:font-extrabold font-bold uppercase cursor-pointer transition-all duration-300 ${
+                className={`relative group flex lg:justify-start h-36  justify-center items-center w-full  bg-black lg:px-12 px-6 lg:py-22 py-10 text-white lg:font-extrabold font-bold uppercase cursor-pointer transition-all duration-300 ${
                   isExpanded ? "border-b-0" : ""
                 }`}
                 onClick={() => toggleAccordion(index)}
               >
-                <h1 className="text-white lg:text-5xl md:text-3xl text-lg text-left">
+                <h1 className="text-white lg:text-5xl md:text-3xl  text-lg ">
                   {item.title}
                 </h1>
                 <div
-                  className={`absolute right-12 top-1/2 -translate-y-1/2 lg:text-4xl text-xl transition-transform duration-1 ${
+                  className={`absolute right-12 md:flex hidden top-1/2 -translate-y-1/2 lg:text-4xl text-xl transition-transform duration-1 ${
                     isExpanded ? "rotate-180" : ""
                   }`}
                 >
@@ -48,7 +48,7 @@ const ServiceMenu = ({inView}) => {
               <div
                 className={`bg-black text-white transition-all duration-500 ease-in-out overflow-hidden ${
                   isExpanded
-                    ? "max-h-[1000px] opacity-100"
+                    ? "max-h-[1500px] opacity-100"
                     : "max-h-0 opacity-0"
                 }`}
               >
