@@ -5,6 +5,7 @@ import chn from '../assets/chinaflag.png';
 import usa from '../assets/usaflag.png';
 import indo from '../assets/indoflag.png';
 import earth from '../assets/earth1.mp4';
+import meta from '../assets/meta.mp4';
 import { Link } from 'react-router-dom';
 import { SpinningText } from "@/components/magicui/spinning-text";
 import { NumberTicker } from "@/components/magicui/number-ticker";
@@ -62,16 +63,22 @@ const Home = () => {
 
 
             </motion.div>
-            <div className='h-20  items-center lg:justify-start justify-center  flex md:hidden mx-16'>
+            <div className='items-center lg:justify-start justify-center  flex md:hidden'>
 
-              <SpinningText className="lg:text-lg font-semibold" duration={8} radius={6}>
-                WELCOME TO METACRAFTER
-              </SpinningText>
+              <div className='w-76 h-36   rounded-[100px] bg-amber-600'>
+                    <video
+            src={meta}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="loader-video rounded-[100px] "/>
+              </div>
 
             </div>
           </div>
 
-          {/* <div className="lg:h-[70vh]  md:h-76 h-80   overflow-hidden"> */}
+          <div className="lg:h-[70vh]  md:h-76 h-80   overflow-hidden">
           <motion.img
 
             initial={{ x: 250, opacity: 0 }}
@@ -80,8 +87,9 @@ const Home = () => {
             viewport={{ once: true }}
             src={img}
             alt="Background"
-            className=" lg:h-[70vh] md:h-[65vh] h-72   overflow-hidden object-cover"
+            className=" lg:h-[74vh] md:h-[65vh] h-80   overflow-hidden object-cover"
           />
+          </div>
 
         </div>
         {/* World map icons*/}
