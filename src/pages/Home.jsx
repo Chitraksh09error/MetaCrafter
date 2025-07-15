@@ -15,13 +15,14 @@ import { useInView } from "react-intersection-observer";
 import HorizontalVscroll from '@/components/HorizontalVscroll';
 import ServiceMenu from '@/components/ServiceMenu';
 import { motion } from 'framer-motion';
+import Footer from '@/components/Footer';
 const Home = () => {
 
   const { ref, inView } = useInView({
     threshold: 0.1, // 50% visible triggers change
   });
   useEffect(() => {
-    document.body.style.backgroundColor = inView ? "black" : "#fffbee";
+    document.body.style.backgroundColor = inView ? "black" : "#eee8d5";
 
     return () => {
       // Reset background on component unmount
@@ -55,18 +56,19 @@ const Home = () => {
               transition={{ duration: 0.4, delay: 0 }}
               viewport={{ once: true }}
               className='mt-14 mb-10 space-y-2 '>
-              <h1 className={`montes lg:text-7xl   lg:leading-20 md:text-6xl ${inView ? ' text-white' : ' text-black'}  text-5xl lg:text-left md:text-left text-center space-y-11  font-extrabold`}>WE <span className='text-amber-300'>CREATE</span> <br /> MEMORABLE <br /> MOMENTS
+              <h1 className={`montes lg:text-7xl   lg:leading-20 md:text-6xl ${inView ? ' text-white' : ' text-black'}  text-4xl lg:text-left md:text-left text-center space-y-11  font-extrabold`}>BEYOND <span className='text-amber-400'>DIGITAL</span> <br /> INTO STORYTELLING
               </h1>
               <div>
-                <h1 className={`montes lg:text-7xl lg:leading-20  md:text-6xl ${inView ? ' text-white' : ' text-black'} text-5xl lg:text-left text-center space-y-11  font-extrabold `}>FOR <span className='text-amber-300' >BRANDS</span> </h1>
+                <h1 className={`montes lg:text-7xl lg:leading-20  md:text-6xl ${inView ? ' text-white' : ' text-black'} text-4xl  lg:text-left md:text-left text-center space-y-11  font-extrabold `}>CRAFTED TO BE FELT, <br /> <span className='text-amber-400 underline-offset-8 decoration-black ' >NOT JUST SEEN</span> </h1>
               </div>
 
 
 
             </motion.div>
+          </div>
             <div className='items-center lg:justify-start justify-center  flex md:hidden'>
 
-              <div className='w-76 h-36   rounded-[100px] bg-amber-600'>
+              <div className='w-76 h-36 rounded-[100px] '>
                     <video
             src={meta}
             autoPlay
@@ -77,7 +79,6 @@ const Home = () => {
               </div>
 
             </div>
-          </div>
 
           {/* <div className="lg:h-[70vh]  md:h-76 h-80   overflow-hidden"> */}
           <motion.img
@@ -179,8 +180,8 @@ const Home = () => {
             className="loader-video"
           />
         </motion.div>
-        <div>
-          <h1 className={`text-center text-4xl mt-10  ${inView ? ' text-white' : ' text-black'} font-extrabold text-black`}>CASE STUDIES</h1>
+        <div className=''>
+          <h1 className={`text-center text-4xl mt-28  ${inView ? ' text-white' : ' text-black'} font-extrabold text-black`}>CASE STUDIES</h1>
           <HorizontalVscroll inView={inView} />
         </div>
         <div className=' text-center mb-20 '>
@@ -198,6 +199,7 @@ const Home = () => {
         </div>
       </div>
       <div className='mt-44 h-96'></div>
+      <Footer/>
     </>
   )
 }
