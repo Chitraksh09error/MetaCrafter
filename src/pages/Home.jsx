@@ -16,6 +16,7 @@ import HorizontalVscroll from '@/components/HorizontalVscroll';
 import ServiceMenu from '@/components/ServiceMenu';
 import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
+import VideoSection from '@/components/VideoSection';
 const Home = () => {
 
   const { ref, inView } = useInView({
@@ -184,7 +185,7 @@ const Home = () => {
           <h1 className={`text-center text-4xl mt-28  ${inView ? ' text-white' : ' text-black'} font-extrabold text-black`}>CASE STUDIES</h1>
           <HorizontalVscroll inView={inView} />
         </div>
-        <div className=' text-center mb-20 '>
+        <div className=' text-center  '>
 
           <div className='lg:px-52 px-2'>
           <h1 className='text-white lg:text-5xl text-4xl font-extrabold'>Specialization</h1>
@@ -198,7 +199,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='mt-44 h-96'></div>
+      <div className='lg:mt-10 mt-5 '>
+        <VideoSection inView={inView} />
+      </div>
       <Footer/>
     </>
   )
