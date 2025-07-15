@@ -100,24 +100,24 @@ const Home = () => {
       </div>
       <div className='flex flex-col flex-wrap space-y-3 px-5 md:hidden'>
         <h2 className={`text-lg ${inView ? ' text-white' : ' text-black'} `}>( About Us )</h2>
-        <h1 className={`text-5xl font-bold  ${inView ? ' text-amber-300' : ' text-blue-950'} `}>Metacrafter</h1>
-        <h2 className={`text-4xl ${inView ? ' text-amber-300' : ' text-blue-950'} font-semibold`}>
+        <h1 className={`text-5xl font-bold  ${inView ? ' text-amber-300' : ' text-black'} `}>Metacrafter</h1>
+        <h2 className={`text-4xl ${inView ? ' text-amber-300' : ' text-black'} font-semibold`}>
           Where creativity meets conversion.
         </h2>
         <h2 className={`text-justify font-medium ${inView ? ' text-white' : ' text-black'} `} >Founded by Aman Kursange, Metacrafter is a creative growth company turning brands into magnetic digital experiences. From cinematic reels to data-backed ad strategies — we don't just market, we craft stories that sell.
           Metacrafter is the brainchild of Aman Kursange — a storyteller, strategist, and builder of digital magic. It's not just a company; it's a movement of modern marketing, where art meets algorithm and design meets depth.
         </h2>
         <br />
-        <h2 className={`text-2xl ${inView ? ' text-amber-300' : ' text-blue-950'}  font-semibold `}>We don't just market.</h2>
+        <h2 className={`text-2xl ${inView ? ' text-amber-300' : ' text-black'}  font-semibold `}>We don't just market.</h2>
         <h2 className={`font-medium text-xl ${inView ? ' text-white' : ' text-black'} `}>We craft moods. Build presence. And turn noise into aesthetic narrative.</h2>
         <h2 className={`text-justify font-medium ${inView ? ' text-white' : ' text-black'} `} >From cinematic reels to scroll-stopping campaigns, from sleek brand identities to performance-driven ads — Metacrafter is your creative growth partner for the now and the next.
         </h2>
         <h1 className={`${inView ? ' text-amber-300' : ' text-black'}`}>
-          🖤 For brands with soul.
+          For brands with soul.
         </h1>
-        <h1  className={`${inView ? ' text-amber-300' : ' text-black'}`} >🌀 For stories worth remembering.
+        <h1  className={`${inView ? ' text-amber-300' : ' text-black'}`} >For stories worth remembering.
         </h1>
-        <h1 className={`${inView ? ' text-amber-300' : ' text-black'}`}>🎯 For impact that linger</h1>
+        <h1 className={`${inView ? ' text-amber-300' : ' text-black'}`}>For impact that linger</h1>
       </div>
       <div ref={ref}>
         <div className='lg:mt-24 mt-10'>
