@@ -8,7 +8,7 @@ import { FaLocationArrow } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-    <div className='lg:px-10 px-5 py-10 bg-black'>
+    <div className='lg:px-10 px-5  py-10 bg-black'>
 
     <div className='w-full   lg:gap-6 gap-1 flex justify-around lg:flex-row md:flex-row flex-col  '>
       <div className=' flex flex-col '>

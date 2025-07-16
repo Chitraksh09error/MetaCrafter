@@ -57,7 +57,7 @@ const Hamburgermenu = () => {
 
             {/* Menu Items */}
             <div
-                className={`absolute left-0 right-0 top-full py-20  bg-[#eee8d5] shadow-md overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100 z-50' : 'max-h-0 opacity-0 z-0'
+                className={`absolute left-0 right-0 top-full py-20  bg-[#eee8d5] shadow-md overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100 z-50' : 'max-h-0 opacity-0 -z-50'
                     }`}
             >
                 <div className='px-30'>
