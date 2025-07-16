@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Inloader from './components/Inloader';
-import { Routes, Route, useLocation} from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -13,6 +13,7 @@ function App() {
   const [routeLoading, setRouteLoading] = useState(false);
   const [slideUp, setSlideUp] = useState(false);
   const location = useLocation();
+    const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,7 +21,8 @@ function App() {
     }, 1000); // Start animation after 2 sec
 
     const removeTimer = setTimeout(() => {
-      setLoading(false); // Remove loader from DOM after animation
+      setLoading(false);
+      navigate('/'); // Remove loader from DOM after animation
     }, 1500); // Loader removed after animation (1s later)
 
     return () => {
@@ -57,7 +59,7 @@ function App() {
           {/* Always present, just fade in/out */}
           <div
             className={` ${
-              routeLoading ? 'opacity-100 visible' : 'opacity-0 invisible'
+              routeLoading && location.pathname !== '/' ? 'opacity-100 visible' : 'opacity-0 invisible'
             }`}
           >
             <Pageloader />
