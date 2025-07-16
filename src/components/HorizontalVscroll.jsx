@@ -1,24 +1,30 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import karhandla from '../assets/karhandla.png'
+
+import img1 from '../assets/1.png';
+import img2 from '../assets/2.png';
+import img3 from '../assets/3.png';
+import img4 from '../assets/4.png';
+import img5 from '../assets/5.png';
+import img6 from '../assets/6.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HorizontalVscroll = ({inView}) => {
+const HorizontalVscroll = ({ inView }) => {
     const sectionRef = useRef(null);
     const containerRef = useRef(null);
-    const cards = [1, 2, 3, 4, 5];
+
+    const images = [img1, img2, img3, img4, img5, img6]; // Array of imported images
 
     useEffect(() => {
         let ctx;
 
-        if (window.innerWidth >= 1024) {  // Enable GSAP only on md and above
+        if (window.innerWidth >= 1024) {
             ctx = gsap.context(() => {
                 const panels = gsap.utils.toArray('.panel');
                 const halfWindow = window.innerWidth / 2;
 
-                // Add left padding to center start
                 containerRef.current.style.paddingLeft = `${halfWindow - 128}px`;
 
                 const totalScroll = containerRef.current.scrollWidth - window.innerWidth;
@@ -35,7 +41,6 @@ const HorizontalVscroll = ({inView}) => {
                 });
             }, sectionRef);
         } else {
-            // Enable native scroll on mobile
             containerRef.current.style.paddingLeft = '0';
         }
 
@@ -51,22 +56,23 @@ const HorizontalVscroll = ({inView}) => {
                 ref={containerRef}
                 className="flex w-max items-center lg:space-x-3 md:space-x-3 space-x-2 px-8 overflow-x-auto md:overflow-hidden"
             >
-                {cards.map((num) => (
+                {images.map((img, index) => (
                     <div
-                        key={num}
-                        className="panel lg:w-80 lg:h-[70vh] md:w-96 w-70 md:h-[600px] h-[450px]  rounded-xl shadow-lg flex justify-center items-center text-3xl font-bold flex-shrink-0"
+                        key={index}
+                        className="panel lg:w-80 lg:h-[70vh] md:w-96 w-70 md:h-[600px] h-[450px] rounded-xl shadow-lg flex justify-center items-center text-3xl font-bold flex-shrink-0"
                     >
                         <img
-                            src={karhandla} // Replace with actual image path or use a dynamic array
-                            alt={`Card ${num}`}
+                            src={img}
+                            alt={`Card ${index + 1}`}
                             className="max-w-full max-h-full object-contain rounded-lg"
                         />
                     </div>
                 ))}
-                <div
-                    className="panel lg:w-80 lg:h-[70vh] w-70 h-[60vh] flex items-center rounded-xl text-3xl font-bold flex-shrink-0"
-                >
-                    <h1 className={`${inView ? 'text-white' : 'text-black'}`}>Endless wonders remain yet to be revealed.</h1>
+
+                <div className="panel lg:w-80 lg:h-[70vh] w-70 h-[60vh] flex items-center rounded-xl text-3xl font-bold flex-shrink-0">
+                    <h1 className={`${inView ? 'text-white' : 'text-black'}`}>
+                        Endless wonders remain yet to be revealed.
+                    </h1>
                 </div>
             </div>
         </section>

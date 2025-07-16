@@ -11,7 +11,7 @@ const Hamburgermenu = () => {
             <div>
 
                 {/* Morphing Dots Menu */}
-                <button onClick={toggleMenu} className="w-8 h-8 focus:outline-none">
+                <button onClick={toggleMenu} className="w-8 h-8 focus:outline-none cursor-pointer ">
                     <svg viewBox="25 25 50 50" className="w-8 h-8 ">
                         {/* Top-left dot (filled) */}
                         <circle
@@ -27,7 +27,7 @@ const Hamburgermenu = () => {
                             cx="65"
                             cy="35"
                             r="8"
-                             fill="black"
+                            fill="black"
                             className="transition-all duration-700 ease-in-out"
                         />
 
@@ -57,18 +57,18 @@ const Hamburgermenu = () => {
 
             {/* Menu Items */}
             <div
-                className={`absolute left-0 right-0 top-full z-50 bg-[#fffbee] shadow-md  overflow-hidden ${isOpen ? 'max-h opacity-100' : 'max-h-0 opacity-0'
+                className={`absolute left-0 right-0 top-full py-20 z-50 bg-[#eee8d5] shadow-md overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
                     }`}
             >
-                <div className='ml-26'>
+                <div className='px-30'>
 
-                <ul className="flex flex-col text-5xl font-bold gap-y-8 p-6">
-                    <li><Link to="/" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Home</Link></li>
-                    <li><Link to="/about" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>About</Link></li>
-                    <li><Link to="/contact" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Contact</Link></li>
-                    <li><Link to="/service" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Services</Link></li>
-                    <li><Link to="/hire" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Hiring</Link></li>
-                </ul>
+                    <ul className="flex flex-col lg:items-start items-center text-5xl font-bold gap-y-8 ">
+                        <li><Link to="/" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Home</Link></li>
+                        <li><Link to="/about" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>About</Link></li>
+                        <li><Link to="/contact" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Contact</Link></li>
+                        <li><Link to="/service" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Services</Link></li>
+                        <li><Link to="/hire" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Hiring</Link></li>
+                    </ul>
                 </div>
             </div>
         </div>

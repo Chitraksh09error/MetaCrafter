@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <>
       <div className=' lg:px-12 mb:px-10 px-5 mt-10 lg:mb-28 mb-5 '>
-        <div className='flex flex-wrap gap-10 justify-around items-center '>
+        <div className='flex flex-wrap lg:gap-2 gap-8 justify-around items-center '>
 
           <div className='flex-col lg:justify-left  justify-center '>
             <motion.div
@@ -44,9 +44,9 @@ const Home = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.1 }}
               viewport={{ once: true }}
-              className='h-20  items-center lg:justify-start justify-center  hidden md:flex mx-16'>
+              className='h-18  items-center lg:justify-start justify-center  hidden md:flex mx-16'>
 
-              <SpinningText className="lg:text-lg font-semibold" duration={8} radius={6}>
+              <SpinningText className="text-lg font-semibold" duration={6} radius={6}>
                 WELCOME TO METACRAFTER
               </SpinningText>
 
@@ -57,10 +57,10 @@ const Home = () => {
               transition={{ duration: 0.4, delay: 0 }}
               viewport={{ once: true }}
               className='mt-14 mb-10 space-y-2 '>
-              <h1 className={`montes lg:text-7xl   lg:leading-20 md:text-6xl ${inView ? ' text-white' : ' text-black'}  text-4xl lg:text-left md:text-left text-center space-y-11  font-extrabold`}>BEYOND <span className='text-amber-400'>DIGITAL</span> <br /> INTO STORYTELLING
+              <h1 className={`montes lg:text-6xl   lg:leading-20 md:text-6xl ${inView ? ' text-white' : ' text-black'}  text-4xl lg:text-left md:text-left text-center space-y-11  font-extrabold`}>BEYOND <span className='text-amber-400'>DIGITAL</span> <br /> INTO STORYTELLING
               </h1>
               <div>
-                <h1 className={`montes lg:text-7xl lg:leading-20  md:text-6xl ${inView ? ' text-white' : ' text-black'} text-4xl  lg:text-left md:text-left text-center space-y-11  font-extrabold `}>CRAFTED TO BE FELT, <br /> <span className='text-amber-400 underline-offset-8 decoration-black ' >NOT JUST SEEN</span> </h1>
+                <h1 className={`montes lg:text-6xl lg:leading-20  md:text-6xl ${inView ? ' text-white' : ' text-black'} text-4xl  lg:text-left md:text-left text-center space-y-11  font-extrabold `}>CRAFTED TO BE FELT, <br /> <span className='text-amber-400 underline-offset-8 decoration-black ' >NOT JUST SEEN</span> </h1>
               </div>
 
 

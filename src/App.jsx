@@ -15,11 +15,11 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setSlideUp(true); // Start slide-up
-    }, 2000); // Start animation after 2 sec
+    }, 1000); // Start animation after 2 sec
 
     const removeTimer = setTimeout(() => {
       setLoading(false); // Remove loader from DOM after animation
-    }, 2500); // Loader removed after animation (1s later)
+    }, 1500); // Loader removed after animation (1s later)
 
     return () => {
       clearTimeout(timer);
