@@ -32,7 +32,7 @@ const ServiceMenu = ({inView}) => {
                 }`}
                 onClick={() => toggleAccordion(index)}
               >
-                <h1 className="text-white lg:text-5xl  md:text-3xl  text-lg lg:text-left    text-left  sm:text-center ">
+                <h1 className="text-white lg:text-5xl  md:text-3xl  text-lg lg:text-left   text-left  sm:text-center ">
                   {item.title}
                 </h1>
                 <div
