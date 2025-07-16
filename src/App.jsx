@@ -38,27 +38,37 @@ function App() {
   }, [location]);
 
   return (
-     <>
-      {loading ? (
-        <Inloader slideUp={slideUp} />
-      ) : (
-        <>
-          <Navbar />
-          {routeLoading ? (
-            <Pageloader /> 
-          ) : (
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/service" element={<Services />} />
-              <Route path="/hire" element={<Hiring />} />
-            </Routes>
-          )}
-        </>
-      )}
-    </>
-  );
+  <>
+    {loading ? (
+      <Inloader slideUp={slideUp} />
+    ) : (
+      <>
+        <Navbar />
+        <div className="relative">
+          {/* Page Content */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/service" element={<Services />} />
+            <Route path="/hire" element={<Hiring />} />
+          </Routes>
+
+          {/* Always present, just fade in/out */}
+          <div
+            className={`absolute inset-0 flex justify-center items-center z-50 transition-opacity duration-500 ${
+              routeLoading ? 'opacity-100 visible' : 'opacity-0 invisible'
+            }`}
+          >
+            <Pageloader />
+          </div>
+        </div>
+      </>
+    )}
+  </>
+);
+
+
 }
 
 export default App;
