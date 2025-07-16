@@ -202,7 +202,6 @@ const Home = () => {
       <div className='lg:mt-10 mt-5 '>
         <VideoSection inView={inView} />
       </div>
-      <Footer/>
     </>
   )
 }

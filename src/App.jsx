@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import Hiring from './pages/Hiring';
 import Navbar from './components/Navbar';
 import Pageloader from './components/Pageloader';
+import Footer from './components/Footer';
 function App() {
   const [loading, setLoading] = useState(true);
   const [routeLoading, setRouteLoading] = useState(false);
@@ -65,6 +66,7 @@ function App() {
             <Pageloader />
           </div>
         </div>
+        <Footer/>
       </>
     )}
   </>

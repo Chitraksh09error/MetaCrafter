@@ -9,7 +9,7 @@ const Services = () => {
   };
 
   return (
-    <div className="w-full lg:px-14 px-3 mt-10">
+    <div className="w-full lg:px-14 px-3 mt-10 mb-10">
       <div className="lg:rounded-[50px] rounded-[25px] overflow-hidden">
         {accordionData.slice(0, 16).map((item, index) => {
           const isFirst = index === 0;
