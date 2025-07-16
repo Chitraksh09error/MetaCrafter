@@ -67,7 +67,7 @@ const Hamburgermenu = () => {
                         <li><Link to="/about" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>About</Link></li>
                         <li><Link to="/contact" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Contact</Link></li>
                         <li><Link to="/service" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Services</Link></li>
-                        <li><Link to="/hire" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>Hiring</Link></li>
+                        <li><Link  to="/hire" className="hover:text-blue-500" onClick={() => { window.scrollTo(0, 0);  setIsOpen(false); } }>Hiring</Link></li>
                     </ul>
                 </div>
             </div>

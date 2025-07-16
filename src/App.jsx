@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
 import Inloader from './components/Inloader';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, useLocation} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import Hiring from './pages/Hiring';
 import Navbar from './components/Navbar';
+import Pageloader from './components/Pageloader';
 function App() {
-  const [count, setCount] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [routeLoading, setRouteLoading] = useState(false);
   const [slideUp, setSlideUp] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -27,27 +29,34 @@ function App() {
     };
   }, []);
 
+   useEffect(() => {
+    if (!loading) {
+      setRouteLoading(true);
+      const timer = setTimeout(() => setRouteLoading(false), 1500); // 1 sec loader
+      return () => clearTimeout(timer);
+    }
+  }, [location]);
+
   return (
-    <>
-      <div className=''>
-        {loading ? (
-          <Inloader slideUp={slideUp} />
-        ) : (
-          <>
-
-              <Navbar/>
-
-              <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/service" element={<Services />} />
-                <Route path="/hire" element={<Hiring />} />
-              </Routes>
-
-          </>
-        )}
-      </div>
+     <>
+      {loading ? (
+        <Inloader slideUp={slideUp} />
+      ) : (
+        <>
+          <Navbar />
+          {routeLoading ? (
+            <Pageloader /> 
+          ) : (
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/service" element={<Services />} />
+              <Route path="/hire" element={<Hiring />} />
+            </Routes>
+          )}
+        </>
+      )}
     </>
   );
 }

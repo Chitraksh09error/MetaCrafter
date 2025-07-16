@@ -46,7 +46,7 @@ const Footer = () => {
             <Link  to="/" className=' hover:text-amber-200'  >Home</Link>
             <Link  to="/about" className='hover:text-amber-200' >About</Link>
             <Link  to="/contact" className='hover:text-amber-200' >Contact</Link>
-            <Link  to="/hire" className='hover:text-amber-200' >Hiring</Link>
+            <Link onClick={() => window.scrollTo(0,0)}  to="/hire" className='hover:text-amber-200' >Hiring</Link>
           </div>
           <div className='flex items-center lg:justify-start justify-center  gap-3 mt-5'>
             <FaLocationArrow className='text-white lg:text-2xl text-xxl' />

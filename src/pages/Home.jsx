@@ -27,7 +27,7 @@ const Home = () => {
 
     return () => {
       // Reset background on component unmount
-      document.body.style.backgroundColor = "#fffbee";
+      document.body.style.backgroundColor = "#eee8d5";
     };
   }, [inView]);
 
