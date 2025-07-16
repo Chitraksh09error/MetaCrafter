@@ -10,7 +10,7 @@ const Footer = () => {
     <>
     <div className='lg:px-10 px-5 py-10 bg-black'>
 
-    <div className='w-full   gap-6 flex justify-around lg:flex-row flex-col  '>
+    <div className='w-full   lg:gap-6 gap-1 flex justify-around lg:flex-row md:flex-row flex-col  '>
       <div className=' flex flex-col '>
         <div>
           <h1  className='lg:text-6xl text-3xl font-bold text-white  ' >Beyond Digital,</h1>
@@ -43,9 +43,9 @@ const Footer = () => {
             </a>
           </div>
           <div className='text-white flex gap-5  justify-center mt-5 text-xl '>
-            <Link  to="/" className=' hover:text-amber-200'  >Home</Link>
-            <Link  to="/about" className='hover:text-amber-200' >About</Link>
-            <Link  to="/contact" className='hover:text-amber-200' >Contact</Link>
+            <Link onClick={() => window.scrollTo(0,0)}  to="/" className=' hover:text-amber-200'  >Home</Link>
+            <Link onClick={() => window.scrollTo(0,0)} to="/about" className='hover:text-amber-200' >About</Link>
+            <Link  onClick={() => window.scrollTo(0,0)} to="/contact" className='hover:text-amber-200' >Contact</Link>
             <Link onClick={() => window.scrollTo(0,0)}  to="/hire" className='hover:text-amber-200' >Hiring</Link>
           </div>
           <div className='flex items-center lg:justify-start justify-center  gap-3 mt-5'>
