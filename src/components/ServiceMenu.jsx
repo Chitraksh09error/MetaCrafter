@@ -27,12 +27,12 @@ const ServiceMenu = ({inView}) => {
             >
               {/* Accordion Header */}
               <div
-                className={`relative group flex lg:justify-start h-36  justify-center items-center w-full  bg-black lg:px-12 px-6 lg:py-22 py-10 text-white lg:font-extrabold font-bold uppercase cursor-pointer transition-all duration-300 ${
+                className={`relative group flex  h-36 justify-start  items-center w-full  bg-black lg:px-12 px-6 lg:py-22 py-10 text-white lg:font-extrabold font-bold uppercase cursor-pointer transition-all duration-300 ${
                   isExpanded ? "border-b-0" : ""
                 }`}
                 onClick={() => toggleAccordion(index)}
               >
-                <h1 className="text-white lg:text-5xl  md:text-3xl  text-lg ">
+                <h1 className="text-white lg:text-5xl  md:text-3xl  text-lg lg:text-left    text-left  sm:text-center ">
                   {item.title}
                 </h1>
                 <div
