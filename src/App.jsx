@@ -56,7 +56,7 @@ function App() {
 
           {/* Always present, just fade in/out */}
           <div
-            className={`absolute inset-0 flex justify-center items-center z-50 transition-opacity duration-500 ${
+            className={` ${
               routeLoading ? 'opacity-100 visible' : 'opacity-0 invisible'
             }`}
           >
