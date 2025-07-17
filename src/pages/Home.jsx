@@ -15,7 +15,6 @@ import { useInView } from "react-intersection-observer";
 import HorizontalVscroll from '@/components/HorizontalVscroll';
 import ServiceMenu from '@/components/ServiceMenu';
 import { motion } from 'framer-motion';
-import Footer from '@/components/Footer';
 import VideoSection from '@/components/VideoSection';
 const Home = () => {
 
@@ -31,11 +30,9 @@ const Home = () => {
     };
   }, [inView]);
 
-
-
   return (
     <>
-      <div className=' lg:px-12 mb:px-10 px-5 mt-10 lg:mb-28 mb-5 '>
+      <div className=' lg:px-12 mb:px-10 px-5 lg:mt-10 mt-0 lg:mb-28 mb-5 '>
         <div className='flex flex-wrap lg:gap-2 gap-8 justify-around items-center '>
 
           <div className='flex-col lg:justify-left  justify-center '>
@@ -49,20 +46,18 @@ const Home = () => {
               <SpinningText className="text-lg font-semibold" duration={6} radius={6}>
                 WELCOME TO METACRAFTER
               </SpinningText>
-
             </motion.div>
             <motion.div
               initial={{ x: -250, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0 }}
               viewport={{ once: true }}
-              className='mt-14 mb-10 space-y-2 '>
+              className='lg:mt-14 mt-6 mb-10 space-y-2 '>
               <h1 className={`montes lg:text-6xl   lg:leading-20 md:text-6xl ${inView ? ' text-white' : ' text-black'}  text-4xl lg:text-left md:text-left text-center space-y-11  font-extrabold`}>BEYOND <span className='text-amber-400'>DIGITAL</span> <br /> INTO STORYTELLING
               </h1>
               <div>
                 <h1 className={`montes lg:text-6xl lg:leading-20  md:text-6xl ${inView ? ' text-white' : ' text-black'} text-4xl  lg:text-left md:text-left text-center space-y-11  font-extrabold `}>CRAFTED TO BE FELT, <br /> <span className='text-amber-400 underline-offset-8 decoration-black ' >NOT JUST SEEN</span> </h1>
               </div>
-
 
 
             </motion.div>
@@ -78,7 +73,6 @@ const Home = () => {
             playsInline
             className="loader-video rounded-[100px] "/>
               </div>
-
             </div>
 
           {/* <div className="lg:h-[70vh]  md:h-76 h-80   overflow-hidden"> */}
@@ -128,13 +122,13 @@ const Home = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.1 }}
             className='lg:text-5xl montes text-3xl  font-extrabold'>
-              FUN FACTS <span className='text-amber-300'>?</span>
+              Did You Know <span className='text-amber-300'>?</span>
             </motion.h1>
             <motion.h2 
              initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.1 }}
-            className='lg:text-3xl text-2xl px-5 font-semibold mt-3'>Our following would rank as the third most populous 'country' after India and China.</motion.h2>
+            className='lg:text-3xl text-2xl px-5 font-semibold mt-3'>If our community were a country, it’d be the 3rd largest after India and China!</motion.h2>
 
             <div className='lg:px-60 px-5'>
 
